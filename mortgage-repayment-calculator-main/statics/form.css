@@ -1,0 +1,346 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+}
+
+.one {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.error-message {
+    font-size: 0.6rem;
+    font-weight: 500;
+}
+input {
+    font-weight: 700;
+    color: var(--clr-slate700);
+}
+a {
+    text-decoration: underline;
+}
+
+a:hover {
+    color: var(--clr-slate900);
+}
+
+.value input:hover {
+    border-color: var(--clr-slate900);
+}
+
+.value input:focus {
+    border: 2px solid var(--clr-lime);
+    outline: none;
+}
+
+.value2 input[type="radio"] {
+    accent-color: var(--clr-lime); /* Change fill color to lime when checked */
+}
+
+.value2 input[type="radio"]:checked {
+    .value div {
+        background-color: var(--clr-lime);
+    }
+}
+
+
+.value2 div:hover {
+    border: 2px solid var(--clr-lime);
+    cursor: pointer;
+}
+
+
+
+.form_title {
+    color: var(--clr-slate700);
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.form_color {
+    color: var(--clr-slate500);
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.value input {
+    max-width: 100%;
+    width: 100%;
+    padding: 0.7em;
+    border: 1px solid var(--clr-slate500);
+    border-radius: 4px;
+    margin: 0.5rem 0;
+}
+
+
+.value {
+    position: relative;
+}
+
+.form_unit {
+    position: absolute;
+    top: 21.4%; /* Center vertically */
+    right: 88.1%; /* Adjust as needed */
+    transform: translateY(-50%);
+    background-color: var(--clr-slate100);
+    color: var(--clr-slate700);
+    padding: 0.53rem 1rem;
+    border-top: 1px solid var(--clr-slate500);
+    border-left: 1px solid var(--clr-slate500);
+    border-bottom: 1px solid var(--clr-slate500);
+    border-radius: 3px 0 0 3px;
+    font-size: 0.85em; /* Adjust font size if needed */
+
+}
+
+.form_years_right {
+    position: absolute;
+    top: 54.5%; /* Center vertically */
+    right: 0.1%; /* Adjust as needed */
+    transform: translateY(-50%);
+    background-color: var(--clr-slate100);
+    color: var(--clr-slate700);
+    font-weight: 500;
+    border-top: 1px solid var(--clr-slate500);
+    border-bottom: 1px solid var(--clr-slate500);
+    border-radius: 0 3px 3px 0;
+    padding: 0.3rem 1rem 0.8rem 1rem;
+    font-size: 0.85em; /* Adjust font size if needed */
+}
+
+.form_percent_right {
+    position: absolute;
+    top: 88.1%; /* Center vertically */
+    right: 0.1%; /* Adjust as needed */
+    transform: translateY(-50%);
+    background-color: var(--clr-slate100);
+    color: var(--clr-slate700);
+    padding: 0.52rem 1rem;
+    border-top: 1px solid var(--clr-slate500);
+    border-bottom: 1px solid var(--clr-slate500);
+    border-radius: 0 3px 3px 0;
+    font-size: 0.85em; /* Adjust font size if needed */
+}
+
+.value input {
+    padding-right: 30px; /* Adjust for the space taken by the span */
+}
+
+#amount {
+    padding-left: 3rem;
+}
+
+.value2 div {
+    border: 1px solid var(--clr-slate500);
+    padding: 0.5em;
+    border-radius: 4px;
+    margin: 0.6em 0;
+
+    label, input {
+        margin-left: 0.5em;
+        color: var(--clr-slate900);
+        font-weight: 700;
+        font-size: 0.8rem;
+    }
+}
+
+
+.value2 div.clicked {
+    background-color: hsla(61, 70%, 52%, 0.15);
+}
+
+.form_calculate {
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.8em 0;
+    margin-top: 2em;
+    color: var(--clr-slate900);
+    font-weight: 700;
+    background-color: var(--clr-lime);
+    border-radius: 50px;
+}
+
+.form_svg {
+    margin-right: 1em;
+    width: 5%
+}
+
+
+
+
+@media (min-width: 375px ) {
+  
+
+    
+
+}
+
+@media (min-width: 475px) {
+ 
+
+    .form_unit {
+        right: 90.5%; /* Adjust as needed */
+    }
+}
+
+
+@media (min-width: 640px) {
+ 
+    .form_unit {
+        right: 93.5%; /* Adjust as needed */
+    }
+}
+
+@media (min-width: 768px) {
+
+    .form {
+        width: 100%;
+        padding: 2rem;
+        background-color: var(--clr-white);
+    }
+
+    .one {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    
+    .two {
+        display: flex;
+        gap: 1rem;
+    }
+    .two input {
+        width: 100%;
+        padding: 0.7em;
+        border: 1px solid var(--clr-slate500);
+        border-radius: 4px;
+        margin: 0.5rem 0;
+    }
+    
+    .form_calculate {
+        width: 80%;
+        padding: 0.5em 0;
+        font-size: 0.9rem;
+    }
+    
+    .form_svg {
+        margin-right: 0.6em;
+        width: 10%;
+    }
+
+    .form_unit {
+        top: 31.6%; /* Center vertically */
+        right: 88.1%; 
+        padding: 0.80rem 1rem;/* Adjust as needed */
+    }
+    .form_years_right {
+    
+        top: 81.5%; /* Center vertically */
+        right: 52.1%; 
+        padding: 0.80rem 1rem;/* Adjust as needed *//* Adjust font size if needed */
+    }
+    
+    .form_percent_right {
+
+        top: 81.3%; /* Center vertically */
+        right: 0.1%; /* Adjust as needed */
+        padding: 0.80rem 1rem;
+        font-size: 0.85em; /* Adjust font size if needed */
+    }
+    
+}
+
+@media (min-width: 1024px) {
+
+    .form_unit {
+        padding: 0.5rem 1rem;
+    }
+
+    .form_years_right {
+    
+        top: 82.4%; /* Center vertically */
+        right: 53%;
+        padding: 0.52rem 0.5rem; /* Adjust as needed *//* Adjust font size if needed */
+        font-size: 0.7rem;
+    }
+ 
+    .form_percent_right {
+
+        top: 82.6%; /* Center vertically */
+        right: 0.3%; /* Adjust as needed */
+        padding: 0.40rem 0.5rem;
+    }
+
+}
+
+@media (min-width: 1280px) {
+    .two {
+        gap: 2.3rem;
+    }
+
+    .two input {
+        max-width: 144%;
+        width: 115%;
+    }
+   
+    .form_unit {
+        top: 32.6%; /* Center vertically */
+        right: 91.1%; /* Adjust as needed */
+        padding: 0.21rem 0.7rem
+    }
+
+    .form_years_right {
+    
+        top: 82.4%; /* Center vertically */
+        right: 52.5%;
+        padding: 0.28rem 0.5rem; /* Adjust as needed *//* Adjust font size if needed */
+        font-size: 0.7rem;
+    }
+    
+    .form_percent_right {
+
+        top: 82.6%; /* Center vertically */
+        right: 0.3%; /* Adjust as needed */
+        padding: 0.28rem 0.5rem;
+    }
+
+   
+}
+@media (min-width: 1440px) {
+
+    .two {
+        gap: 3rem;
+    }
+    .two input {
+        max-width: 144%;
+        width: 120%;
+        padding: 1.3em;
+        border: 1px solid var(--clr-slate500);
+        border-radius: 4px;
+        margin: 0.5rem 0;
+    }
+
+    .form_years_right {
+        top: 80.5%; /* Center vertically */
+        right: 53.1%; /* Adjust as needed *//* Adjust font size if needed */
+        padding: 0.60rem 1rem;
+    }
+    
+    .form_percent_right {
+        top: 81.3%; /* Center vertically */
+        right: 0.3%; /* Adjust as needed */
+        padding: 0.50rem 1rem;
+
+    }
+
+}
+@media (min-width: 1536px) {
+  
+}

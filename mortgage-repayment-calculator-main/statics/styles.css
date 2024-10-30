@@ -1,0 +1,62 @@
+:root {
+    --clr-lime: hsl(61, 70%, 52%);
+    --clr-red: hsl(4, 69%, 50%);
+
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-slate100: hsl(202, 86%, 94%);
+    --clr-slate300: hsl(203, 41%, 72%);
+    --clr-slate500: hsl(200, 26%, 54%);
+    --clr-slate700: hsl(199, 33%, 20%);
+    --clr-slate900: hsl(202, 55%, 16%);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+    user-select: none;
+}
+
+svg {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    border: none;
+    padding: 0;
+    margin: 0;
+    background-color: none;
+}
+
+span {
+    display: inline-block;
+}
+
+a {
+    color: inherit;
+    cursor: pointer;
+}
