@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./assets/images/1440px_solution.png.jpg)
+![](./assets/images/1440px_solution.png)
 
 ![](./assets/images/375px_solution.png)
 
