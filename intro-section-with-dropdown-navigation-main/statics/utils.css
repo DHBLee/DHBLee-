@@ -1,0 +1,27 @@
+.container {
+    margin: 1rem
+}
+
+
+
+@media(min-width: 375px) {
+
+}
+
+@media(min-width: 425px) {
+    
+
+}
+
+@media(min-width: 590px) {
+
+}
+
+@media(min-width: 768px) {
+
+
+    .container {
+        margin: 0rem 1rem;
+    }
+    
+}
