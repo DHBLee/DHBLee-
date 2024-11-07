@@ -1,0 +1,73 @@
+:root {
+    --clr-blueintro: hsl(217, 28%, 15%);
+    --clr-bluemain: hsl(218, 28%, 13%);
+    --clr-bluefooter: hsl(216, 53%, 9%);
+    --clr-bluetesti: hsl(219, 30%, 18%);
+
+    --clr-cyan: hsl(176, 68%, 64%);
+    --clr-blue: hsl(198, 60%, 50%);
+    --clr-red: hsl(0, 100%, 63%);
+
+    --clr-white: hsl(0, 0%, 100%);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 14px;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--clr-blueintro);
+    color: var(--clr-white);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+    user-select: none;
+}
+
+svg {
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+}
+
+button {
+    border: none;
+    padding: 0;
+    margin: 0;
+    background-color: inherit;
+    cursor: pointer;
+}
+
+
+span {
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+}
