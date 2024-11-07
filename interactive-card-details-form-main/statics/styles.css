@@ -1,0 +1,70 @@
+:root {
+    --clr-active: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+    --clr-red: hsl(0, 100%, 66%);
+
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-lightgray: hsl(270, 3%, 87%);
+    --clr-gray: hsl(279, 6%, 55%);
+    --clr-darkgray: hsl(278, 68%, 11%);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 18px;
+}
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 300;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+    user-select: none;
+}
+
+svg {
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+}
+
+button {
+    border: none;
+    padding: 0;
+    margin: 0;
+    background-color: inherit;
+    cursor: pointer;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+span {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+}

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alata&family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Epilogue:ital,wght@0,100..900;1,100..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+
+  <link href="statics/styles.css" rel="stylesheet">
+  <link href="statics/main.css" rel="stylesheet">
+
+  <title>Frontend Mentor | Interactive card details form</title>
+
+
+</head>
+<body>
+  <main class="main">
+
+    <section class="card">
+      <img 
+      id="card_img" 
+      srcset="./images/bg-main-mobile.png 320w, ./images/bg-main-desktop.png 768w" 
+      src="./images/bg-main-mobile.png" 
+      alt="bg">
+      <div class="card_front">
+        <img id="front_img" src="./images/bg-card-front.png" alt="front">
+        <svg  class="front_logo" viewbox="0 0 450 55" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="23.478" cy="23.5" rx="23.478" ry="23.5" fill="#fff"/><path d="M83.5 23.5c0 5.565-4.507 10.075-10.065 10.075-5.559 0-10.065-4.51-10.065-10.075 0-5.565 4.506-10.075 10.065-10.075 5.558 0 10.065 4.51 10.065 10.075Z" stroke="#fff"/></svg>
+        <span class="front_num">0000 0000 0000 0000</span>
+        <span class="front_name">Jane Appleseed</span>
+        <span class="front_date">00/00</span>
+      </div>
+
+      <div class="card_back">
+        <img id="back_img" src="./images/bg-card-back.png" alt="back">
+        <span class="back_cvc">000</span>
+      </div>
+
+    </section>
+
+    <section class="details">
+      <form class="form_details" id="card_form">
+        <label for="name">CARDHOLDER NAME</label><br>
+        <input type="text" id="name" name="name" placeholder="e.g. Jane Appleseed"><br>
+        <span class="error_name error"></span><br>
+        <label for="number">CARD NUMBER</label><br>
+        <input type="text" id="number" name="number" placeholder="e.g. 1234 5678 9123 0000"><br>
+        <span class="error_num error"></span><br>
+        <div class="form_flex">
+          <label for="date">EXP. DATE (MM/YY)</label><br>
+          <label for="cvc">CVC</label>
+        </div>
+        <div class="form_flex">
+          <input type="number" id="month" name="month" placeholder="MM">
+          <input type="number" id="year" name="year" placeholder="YY">
+          <input type="number" id="cvc" name="cvc" placeholder="e.g. 123">
+        </div>
+        <div style="display: flex;">
+          <span class="error_date error"></span><br>
+          <span class="error_cvc error"></span><br>
+        </div>
+        <br>
+        <input type="submit" id="submit" name="submit" value="Confirm">
+      </form>
+
+      <div class="complete">
+        <svg width="80" height="80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="40" fill="url(#a)"/><path d="M28 39.92 36.08 48l16-16" stroke="#fff" stroke-width="3"/><defs><linearGradient id="a" x1="-23.014" y1="11.507" x2="0" y2="91.507" gradientUnits="userSpaceOnUse"><stop stop-color="#6348FE"/><stop offset="1" stop-color="#610595"/></linearGradient></defs></svg>
+        <span class="complete_title">THANK YOU!</span>
+        <span class="complete_subtitle">We've added your card details</span>
+        <button class="complete_btn">Continue</button>
+      </div>
+    </section>
+
+  </main>
+
+
+
+  
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+
+  <script>
+    document.getElementById('card_form').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      let notValid = false;
+      //Validation for name
+      const name = document.getElementById('name').value;
+      const nameTrim = name.trim();
+      const nameRegex = /^[a-zA-Z\s]+$/;
+
+      //Validation for card number
+      const cardNumber = document.getElementById('number').value;
+      const cardNumberTrim = cardNumber.replace(/\s+/g, '');
+      const cardNumberRegex = /^\d{16}$/;
+
+      //Validation for Expiration Date
+      const month = document.getElementById('month').value;
+      const year = document.getElementById('year').value;
+      const currentYear = new Date().getFullYear().toString().slice(-2);
+      const currentMonth = new Date().getMonth() + 1;
+
+      //Validation for CVC Number
+      const cvc = document.getElementById('cvc').value;
+      const cvcRegex = /^\d{3}$/;
+
+      //Validation
+      if (!name || !nameRegex.test(nameTrim)) {
+        document.querySelector('.error_name').innerHTML = `Please enter a valid cardholder name`;
+        document.getElementById('name').style.borderColor = 'red';
+
+        notValid = true;
+      } 
+      if (!cardNumber || !cardNumberRegex.test(cardNumberTrim)) {
+        document.querySelector('.error_num').innerHTML = `Wrong format, numbers only`;
+        document.getElementById('number').style.borderColor = 'red';
+       
+        notValid = true;
+      }
+      if (!month || month < 1 || month > 12) {  // Check if month is invalid
+      document.querySelector('.error_date').innerHTML = "Invalid month.";
+      document.getElementById('month').style.borderColor = 'red';  // Change border color for month// Reset border color for year
+      notValid = true;
+      } else if (!year || year < currentYear || (year == currentYear && month < currentMonth)) {  // Check if year is invalid
+      document.querySelector('.error_date').innerHTML = "Invalid year.";
+      document.getElementById('year').style.borderColor = 'red';  // Change border color for year
+      notValid = true;
+      }
+      if (!cvc || !cvcRegex.test(cvc)) {
+        document.querySelector('.error_cvc').innerHTML = `Can't be blank`;
+        document.getElementById('cvc').style.borderColor = 'red';
+       
+        notValid = true
+      }
+      if (!notValid) {
+        
+        document.querySelector('.form_details').style.display = 'none';
+        document.querySelector('.complete').style.display = 'flex';
+        document.querySelector('.front_num').innerHTML = cardNumber;
+        document.querySelector('.front_name').innerHTML = name;
+        document.querySelector('.front_date').innerHTML = `${month}/${year}`;
+        document.querySelector('.back_cvc').innerHTML = cvc;
+        this.submit();
+      }
+
+    })
+
+    document.querySelector('.complete_btn').addEventListener('click', () => {
+      location.reload();
+    })
+  </script>
+</body>
+</html>
